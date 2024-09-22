@@ -22,9 +22,11 @@ Resources:
     Properties:
       SubnetId: !Ref Subnet1
       ImageId: ami-0aa097a5c0d31430a
+      InstanceType: t2.micro
 
   DBServer:
     Type: AWS::EC2::Instance
     Properties:
       SubnetId: !Ref Subnet2
       ImageId: ami-0aa097a5c0d31430a
+      InstanceType: t2.micro
