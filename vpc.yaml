@@ -16,3 +16,13 @@ Resources:
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 10.0.1.32/28
+
+  AppServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      SubnetId: !Ref Subnet1
+
+  DBServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      SubnetId: !Ref Subnet2
