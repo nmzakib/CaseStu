@@ -5,13 +5,13 @@ Resources:
     Properties:
       CidrBlock: 10.0.1.0/26
 
-  Subnet:
+  Subnet1:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 10.0.1.0/28
 
-  Subnet:
+  Subnet2:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC
