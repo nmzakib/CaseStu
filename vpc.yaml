@@ -21,8 +21,10 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       SubnetId: !Ref Subnet1
+      ImageId: ami-0aa097a5c0d31430a
 
   DBServer:
     Type: AWS::EC2::Instance
     Properties:
       SubnetId: !Ref Subnet2
+      ImageId: ami-0aa097a5c0d31430a
