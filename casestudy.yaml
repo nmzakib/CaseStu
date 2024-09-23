@@ -26,16 +26,23 @@ Resources:
        - Key: Name
          Value: CaseStudyPrivateDBSubnet
 
-#  AppServer:
-#    Type: AWS::EC2::Instance
-#    Properties:
-#      SubnetId: !Ref Subnet1
-#      ImageId: ami-0aa097a5c0d31430a
-#      InstanceType: t2.micro
-#
-#  DBServer:
-#    Type: AWS::EC2::Instance
-#    Properties:
-#      SubnetId: !Ref Subnet2
-#      ImageId: ami-0aa097a5c0d31430a
-#      InstanceType: t2.micro
+  AppServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      SubnetId: !Ref Subnet1
+      ImageId: ami-0aa097a5c0d31430a
+      InstanceType: t2.micro
+      Tags:
+       - Key: Name
+         Value: CaseStudyAppServer
+
+  DBServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      SubnetId: !Ref Subnet2
+      ImageId: ami-0aa097a5c0d31430a
+      InstanceType: t2.micro
+      InstanceType: t2.micro
+      Tags:
+       - Key: Name
+         Value: CaseStudyDBServer
