@@ -1,48 +1,48 @@
-AWSTemplateFormatVersion: "2010-09-09"
-Resources:
-  VPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: 10.0.1.0/24
-      Tags:
-       - Key: Name
-         Value: CaseStudyVPC
+# AWSTemplateFormatVersion: "2010-09-09"
+# Resources:
+#   VPC:
+#     Type: AWS::EC2::VPC
+#     Properties:
+#       CidrBlock: 10.0.1.0/24
+#       Tags:
+#        - Key: Name
+#          Value: CaseStudyVPC
 
-  Subnet1:
-    Type: AWS::EC2::Subnet
-    Properties:
-      VpcId: !Ref VPC
-      CidrBlock: 10.0.1.16/28
-      Tags:
-       - Key: Name
-         Value: CaseStudyPrivateAppSubnet
+#   Subnet1:
+#     Type: AWS::EC2::Subnet
+#     Properties:
+#       VpcId: !Ref VPC
+#       CidrBlock: 10.0.1.16/28
+#       Tags:
+#        - Key: Name
+#          Value: CaseStudyPrivateAppSubnet
 
-  Subnet2:
-    Type: AWS::EC2::Subnet
-    Properties:
-      VpcId: !Ref VPC
-      CidrBlock: 10.0.1.32/28
-      Tags:
-       - Key: Name
-         Value: CaseStudyPrivateDBSubnet
+#   Subnet2:
+#     Type: AWS::EC2::Subnet
+#     Properties:
+#       VpcId: !Ref VPC
+#       CidrBlock: 10.0.1.32/28
+#       Tags:
+#        - Key: Name
+#          Value: CaseStudyPrivateDBSubnet
 
-  AppServer:
-    Type: AWS::EC2::Instance
-    Properties:
-      SubnetId: !Ref Subnet1
-      ImageId: ami-0aa097a5c0d31430a
-      InstanceType: t2.micro
-      Tags:
-       - Key: Name
-         Value: CaseStudyAppServer
+#   AppServer:
+#     Type: AWS::EC2::Instance
+#     Properties:
+#       SubnetId: !Ref Subnet1
+#       ImageId: ami-0aa097a5c0d31430a
+#       InstanceType: t2.micro
+#       Tags:
+#        - Key: Name
+#          Value: CaseStudyAppServer
 
-  DBServer:
-    Type: AWS::EC2::Instance
-    Properties:
-      SubnetId: !Ref Subnet2
-      ImageId: ami-0aa097a5c0d31430a
-      InstanceType: t2.micro
-      InstanceType: t2.micro
-      Tags:
-       - Key: Name
-         Value: CaseStudyDBServer
+#   DBServer:
+#     Type: AWS::EC2::Instance
+#     Properties:
+#       SubnetId: !Ref Subnet2
+#       ImageId: ami-0aa097a5c0d31430a
+#       InstanceType: t2.micro
+#       InstanceType: t2.micro
+#       Tags:
+#        - Key: Name
+#          Value: CaseStudyDBServer
