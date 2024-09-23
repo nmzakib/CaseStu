@@ -4,18 +4,27 @@ Resources:
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.1.0/24
+      Tags:
+       - Key: Name
+         Value: CaseStudyVPC
 
   Subnet1:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 10.0.1.16/28
+      Tags:
+       - Key: Name
+         Value: CaseStudyPrivateAppSubnet
 
   Subnet2:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 10.0.1.32/28
+      Tags:
+       - Key: Name
+         Value: CaseStudyPrivateDBSubnet
 
 #  AppServer:
 #    Type: AWS::EC2::Instance
